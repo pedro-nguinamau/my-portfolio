@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Pedro Nguinamau</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        
+        }
+        img {
+            height: 200px;
+         width: 200px;
+        }
+       #github {
+            color: #fff;
+            background-color: #050505;
+            border-radius: 20px;
+            padding: 7px 14px;
+        }
+        .navbar {
+            background-color: #fff;
+            background-color: none;
+            position: fixed;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .navbar-content {
+            padding: 0 20px;
+            height: 10vh;
+            width: 100%;
+            max-width: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+        #logo {
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-family: sans-serif;
+            color: #2e2e2e;
+
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .link a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: sans-serif;
+            color: #3d3d3d;
+        }
+        .Inicio {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            height: 100vh;
+            width: 100%;
+        }
+        .Inicio-Content {
+            
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        
+            width: 100%;
+            max-width: 1080px;
+           
+
+
+        }
+        .Inicio h3 {
+            font-weight: 500;
+            color: #3d3d3d;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .Inicio h1 {
+            font-weight: 500;
+            font-size: 3rem;
+            color: #050505;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .Inicio h2{
+            font-weight: 500;
+            font-size: 1rem;
+            color: #050505;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+
+        /* Sobre */
+
+  
+        .Sobre-Content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh; 
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .blocos {
+     
+            flex-wrap: wrap;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            font-family: sans-serif;
+        }
+        .bloco {
+            background-color: #fff;
+            border:  1px solid #8a8a8a;
+            border-radius: 13px;
+            padding: 15px;
+            width: 300px;
+            height: 170px;
+        }
+        .bloco h1 {
+            text-align: center;
+            font-weight: 500;
+            font-size: 2.1rem;
+            margin-bottom: 6px;
+        }
+        .bloco p {
+           
+            text-align: center;
+            color: #252525;
+            font-size: 10px;
+            line-height: 14px;
+            text-align: center;
+        }
+        .text p{
+        
+            margin-inline: 14px;
+            display: flex;
+            margin-top: 20px;
+            font-family: sans-serif;
+            text-align: justify;
+            font-size: 12px;
+        }
+        .Habilidades{ 
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+  
+        .blocoF {
+            border: 1px solid #8a8a8a;
+            border-radius: 16px;
+            padding: 15px;
+            width: 300px;
+            font-family: sans-serif;
+          
+            border-radius: 16px;
+
+
+            /* border: 1px solid #8a8a8a;
+            padding: 23px;
+            width: 380px;
+            height: 390px;
+            margin: 14px 2px; */
+        }
+        .blocoF h1 {
+            text-align: center;
+            font-weight: 500;
+            font-size: 2.1rem;
+            margin-bottom: 18px;
+
+        }
+        @media(max-width: 480px) {
+            #logo {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: sans-serif;
+            color: #2e2e2e;
+
+        }
+
+        .bloco {
+                width: 240px;
+            }
+            .blocoF {
+                width: 240px;
+            }
+     
+        }
+       
+     ul { 
+            column-count: 2; /* Divide em duas colunas */
+            column-gap: 6px; /* Espaço entre as colunas */
+            list-style: none; 
+        
+
+        }
+       li {
+          margin-bottom: 20px;
+          font-size: 12px;
+
+        }
+   
+    
+/* Menu */
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .navbar-content{
+        display: flex;
+        flex-direction: row;
+    }
+  .link {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    color: #fff;
+    top: 50px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .Inicio-Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link a {
+    margin: 5px 0;
+    color: #fff;
+  }
+
+  .hamburger {
+    display: flex;
+  
+  }
+
+  .link.active {
+    display: flex;
+  }
+}
+
+.Contactar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Contactar li {
+    list-style: none;
+
+
+}
+
+.Contactar  a  {
+  text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 1rem;
+    gap: 7px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 1px solid #111111;
+    border-radius: 30px;
+    padding: 8px 14px;
+    width: 300px;
+    background-color: #111111;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+          <a href="#" id="logo">Pedro Nguinamau</a>
+          <div id="hamburger" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="link">
+            <a href="#Inicio">Inicio</a>
+            <a href="#Sobre">Sobre</a>
+            <a href="#Habilidades">Habilidades</a>
+            <a href="#Contactar">Contactar</a>
+            <a href="https://github.com/pedro-nguinamau" id="github">github <span><i class="fa-brands fa-github" style="color: #fff;"></i></span></a>
+          </div>
+        </div>
+      </div>
+    
+    <div class="Inicio" id="Inicio">
+    <div class="Inicio-Content">
+
+            <img src="./assets/foto/Camada 2.png" alt="Fotografia de Pedro Nguinamau" >
+ 
+          <div class="init" style="display: flex; flex-direction: column;">
+            <h3>Olá, Eu Sou</h3>
+            <h1>Pedro Nguinamau</h1>
+            <h2>Desenvolvedor Web FullStack</h2>
+     
+          </div>
+    </div>
+    </div>
+
+
+
+        <div class="Sobre-Content" id="Sobre">
+          
+                <div class="blocos">
+                    <div class="bloco">
+                        <h1>Experiencia</h1>
+                        <p>2º Anos</p>
+                        <p>Desenvolvedor FullStack Freelancer</p>
+                    </div>
+                    <div class="bloco">
+                        <h1>Educação</h1>
+                        <p>Técnico Médio - Instituto Adms. e Serviços "O Pensador do Futuro"</p>
+                        <p>Formado em Desenvolvimento Web - Cefitel</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Olá, sou Pedro Nguinamau, um desenvolvedor FullStack apaixonado pelas novas tecnologias. Atualmente, estou no ensino médio, estudando Informática e Design, o que me permite combinar habilidades técnicas e criativas em meus projetos. Trilho essa jornada com o objetivo de aprimorar minhas aptidões, aprender continuamente e aplicar esses conhecimentos no desenvolvimento de soluções inovadoras. Meu foco está em ferramentas modernas como TypeScript, Node.js, e muito mais, sempre buscando crescer como profissional e contribuir para a evolução tecnológica."
+                    </p>
+                </div>
+         
+        </div> 
+  
+
+<div class="Habilidades" id="Habilidades">
+        <div class="blocoF">
+            <h1>Frontend</h1>
+                    <ul class="lista">
+                        <li> <span><i class="fa-solid fa-circle-check"></i></span> Html</li>
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> Css</li>
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> JavaScript</li>              
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> ailwindCss</li>
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> React</li>
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> Next</li>
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> Design thinking</li>
+                        <li><span><i class="fa-solid fa-circle-check"></i></span> Material UI</li>
+                       </ul>
+        </div>
+        <div class="blocoF">
+            <h1>Backend</h1>
+                <ul class="lista">
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> TypeScript</li>
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Node</li>            
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Json</li>
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Python</li>
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Flask</li>
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Fastify</li>
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Git</li>
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Mysql</li>
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> ORM - Prisma</li>              
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Swagger</li>
+                    <li><span><i class="fa-solid fa-circle-check"></i></span> Express</li>
+                   </ul>
+        </div>
+   
+    </div>
+
+    <div class="Contactar" id="Contactar">
+       <li> <a href="mailto:pedronguinamau51@gmail.com"> <span><i class="fa-regular fa-envelope"></i></span>Enviar Email</a></li>
+         <li><a href="https://wa.me/957490016"><span><i class="fa-brands fa-whatsapp"></i></span>Contactar no whatsapp</a></li>
+
+    </div>
+
+</body>
+<script>
+const hamburger = document.getElementById("hamburger");
+const links = document.querySelector(".link");
+const linkItems = document.querySelectorAll(".link a");
+
+// Alterna o menu ao clicar no botão hambúrguer
+hamburger.addEventListener("click", () => {
+  links.classList.toggle("active");
+});
+
+// Fecha o menu ao clicar em qualquer link
+linkItems.forEach(link => {
+  link.addEventListener("click", () => {
+    links.classList.remove("active");
+  });
+});
+
+
+</script>
+</html>
